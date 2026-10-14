@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Eric Gharios · Formador en IA, Inglés e IT</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:oklch(0.22 0.012 250);--soft:oklch(0.40 0.012 250);--faint:oklch(0.55 0.010 250);--paper:oklch(0.985 0.004 90);--rule:oklch(0.88 0.008 250);--slate:oklch(0.24 0.018 250);--slate-text:oklch(0.88 0.010 250);--slate-faint:oklch(0.72 0.012 250);--accent:oklch(0.72 0.12 65);--accent-dim:oklch(0.50 0.10 65);--chip:oklch(0.95 0.010 80)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"IBM Plex Sans",system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--accent-dim)}a:hover{color:var(--ink)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+.mono{font-family:"IBM Plex Mono",monospace}
+nav.top{position:sticky;top:0;z-index:5;background:var(--slate);color:var(--slate-text)}
+nav.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:14px;padding-bottom:14px;flex-wrap:wrap}
+nav.top .brand{font-family:"Fraunces",serif;font-size:18px;color:#fff}
+nav.top ul{list-style:none;margin:0;padding:0;display:flex;gap:20px;flex-wrap:wrap}
+nav.top a{color:var(--slate-text);text-decoration:none;font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+nav.top a:hover{color:var(--accent)}
+header.hero{background:var(--slate);color:var(--slate-text);padding:72px 0 64px;border-bottom:8px solid var(--accent)}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin:0 0 16px}
+h1{font-family:"Fraunces",serif;font-weight:500;font-size:clamp(40px,7vw,68px);line-height:1;letter-spacing:-.02em;margin:0;color:#fff}
+h1 em{font-style:italic}
+.hero p.lead{max-width:640px;font-size:18px;margin:20px 0 0;color:var(--slate-text);text-wrap:pretty}
+.hero .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.hero .tags span{font-family:"IBM Plex Mono",monospace;font-size:12px;padding:6px 12px;border:1px solid oklch(0.42 0.015 250);border-radius:999px}
+section{padding:64px 0;border-bottom:1px solid var(--rule)}
+.sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:28px}
+.sec-head h2{margin:0;font-size:14px;font-weight:600;letter-spacing:.2em;text-transform:uppercase}
+.sec-head .rule{flex:1;height:1px;background:var(--rule)}
+h3{font-size:22px;margin:0 0 8px;line-height:1.25}
+p{margin:0 0 12px;text-wrap:pretty}
+.muted{color:var(--soft)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:24px}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:16px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:12px;margin:24px 0}
+.fact{border-top:2px solid var(--accent);padding-top:10px}
+.fact b{display:block;font-family:"Fraunces",serif;font-weight:500;font-size:26px}
+.fact span{font-size:13px;color:var(--soft)}
+.blocks{list-style:none;margin:0;padding:0;display:grid;gap:0;border-top:1px solid var(--rule)}
+.blocks li{display:grid;grid-template-columns:72px 1fr auto;gap:16px;padding:12px 0;border-bottom:1px solid var(--rule);align-items:baseline}
+.blocks .n{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--accent-dim)}
+.blocks .s{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--faint)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{font-family:"IBM Plex Mono",monospace;font-size:12px;padding:5px 11px;background:var(--chip);border-radius:999px;color:var(--soft)}
+.card{background:#fff;border:1px solid var(--rule);border-radius:6px;padding:20px;display:flex;flex-direction:column;gap:8px}
+.card .kind{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-dim)}
+.card h4{margin:0;font-size:16px}
+.card p{font-size:14px;color:var(--soft);margin:0;flex:1}
+.card a.dl{font-family:"IBM Plex Mono",monospace;font-size:12px;text-decoration:none;border-bottom:1px solid currentColor;align-self:flex-start;margin-top:6px}
+details.prompt{background:var(--slate);color:var(--slate-text);border-radius:6px;margin-bottom:12px}
+details.prompt summary{cursor:pointer;padding:14px 18px;font-weight:500;color:#fff;list-style:none;display:flex;justify-content:space-between;gap:12px}
+details.prompt summary::after{content:"+";font-family:"IBM Plex Mono",monospace;color:var(--accent)}
+details.prompt[open] summary::after{content:"−"}
+details.prompt pre{margin:0;padding:0 18px 18px;font-family:"IBM Plex Mono",monospace;font-size:12.5px;line-height:1.55;white-space:pre-wrap;color:var(--slate-text)}
+.sample{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:2px 8px;border:1px solid var(--accent);color:var(--accent-dim);border-radius:999px}
+ul.plain{margin:0;padding-left:18px}ul.plain li{margin-bottom:4px}
+footer{background:var(--slate);color:var(--slate-text);padding:32px 0;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer a{color:#fff}
+</style>
+</head>
+<body>
+<nav class="top"><div class="wrap"><span class="brand">Eric Gharios</span><ul><li><a href="#sobre-mi">Sobre mí</a></li><li><a href="#ia">IA para empresas</a></li><li><a href="#ingles">Inglés</a></li><li><a href="#it">IT y ciberseguridad</a></li></ul></div></nav>
+<header class="hero" data-screen-label="Hero">
+<div class="wrap">
+<p class="eyebrow">Portfolio de formación · Granada</p>
+<h1>Eric <em>Gharios</em></h1>
+<p class="lead">Formador en inteligencia artificial aplicada a la empresa, inglés e IT. Diseño cursos prácticos para equipos sin perfil técnico, en español, inglés y francés.</p>
+<div class="tags"><span>IA aplicada</span><span>Inglés A1–C1</span><span>Ciberseguridad</span><span>ES · EN · FR</span></div>
+</div>
+</header>
+<main>
+<section id="sobre-mi" data-screen-label="Sobre mí">
+<div class="wrap">
+<div class="sec-head"><h2>Sobre mí</h2><span class="rule"></span></div>
+<div class="grid2">
+<div>
+<p>Combino experiencia en venta B2B de software, formación en ciberseguridad y docencia en activo. Eso me permite explicar la IA desde el uso real en la oficina: qué tareas se pueden automatizar, con qué herramientas y con qué precauciones.</p>
+<p class="muted">Actualmente doy clases de inglés en Academia 10 (Granada) y formación privada de IT, IA e inglés para adultos y profesionales.</p>
+</div>
+<div>
+<ul class="plain">
+<li>MBA en Marketing Digital, American Business School of Paris</li>
+<li>Ciberseguridad: Pentesting y Hacking Ético, Guardia Cyber School</li>
+<li>Inglés y francés nativos, árabe C1, español B2</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="ia" data-screen-label="IA para empresas">
+<div class="wrap">
+<div class="sec-head"><h2>IA para empresas</h2><span class="rule"></span></div>
+<h3>Inteligencia Artificial aplicada a oficinas y despachos</h3>
+<p class="muted">Programa de 20 sesiones para administrativos, personal de oficina, paralegales y secretarios. Se imparte solo con herramientas gratuitas, para que cualquier participante pueda repetir los ejercicios desde el primer día sin coste.</p>
+<div class="facts">
+<div class="fact"><b>40 h</b><span>20 sesiones de 2 horas</span></div>
+<div class="fact"><b>8</b><span>bloques temáticos</span></div>
+<div class="fact"><b>10</b><span>herramientas gratuitas</span></div>
+<div class="fact"><b>7 + 1</b><span>mini-tests y examen final</span></div>
+</div>
+<ul class="blocks">
+<li><span class="n">Bloque 1</span><span>Gemini: introducción, prompting CRAFT, funciones avanzadas</span><span class="s">S1–S3</span></li>
+<li><span class="n">Bloque 2</span><span>Google AI Studio y NotebookLM</span><span class="s">S4–S6</span></li>
+<li><span class="n">Bloque 3</span><span>Copilot web y ChatGPT: análisis de documentos, Custom Instructions</span><span class="s">S7–S10</span></li>
+<li><span class="n">Bloque 4</span><span>Triaje de correo con un prompt personal</span><span class="s">S11–S12</span></li>
+<li><span class="n">Bloque 5</span><span>Gestión documental: taxonomía y clasificador JSON</span><span class="s">S13–S14</span></li>
+<li><span class="n">Bloque 6</span><span>Automatización con Make.com: correo → IA → archivo</span><span class="s">S15–S16</span></li>
+<li><span class="n">Bloque 7</span><span>Presentaciones con Gamma y Canva, agentes de IA, repaso</span><span class="s">S17–S18</span></li>
+<li><span class="n">Bloque 8</span><span>Examen final, showcase de proyectos y plan 30/60/90</span><span class="s">S19–S20</span></li>
+</ul>
+<p style="margin-top:24px" class="mono muted">Herramientas</p>
+<div class="chips"><span>Gemini</span><span>Google AI Studio</span><span>NotebookLM</span><span>Copilot</span><span>ChatGPT</span><span>Claude</span><span>Make.com</span><span>Perplexity</span><span>Gamma</span><span>Canva</span></div>
+<p style="margin-top:40px" class="mono muted">Materiales del curso</p>
+<div class="grid3">
+<div class="card"><span class="kind">Programa · DOCX</span><h4>Programa de 20 sesiones</h4><p>Calendario, objetivos por sesión, herramientas y sistema de evaluación.</p><a class="dl" href="materiales/ia-empresas/programa_20_sesiones.docx">Descargar</a></div>
+<div class="card"><span class="kind">Talleres · DOCX</span><h4>Cuaderno de talleres</h4><p>Todos los ejercicios prácticos paso a paso, listos para proyectar o imprimir.</p><a class="dl" href="materiales/ia-empresas/cuaderno_talleres_20_sesiones.docx">Descargar</a></div>
+<div class="card"><span class="kind">Formador · DOCX</span><h4>Checklist de materiales</h4><p>Documentos de ejemplo anonimizados, lotes de correos, tests y examen.</p><a class="dl" href="materiales/ia-empresas/checklist_materiales_curso.docx">Descargar</a></div>
+<div class="card"><span class="kind">Alumno · DOCX</span><h4>Vocabulario técnico EN → ES</h4><p>Términos en inglés de las herramientas de IA, con pronunciación y uso.</p><a class="dl" href="materiales/ia-empresas/vocabulario_tecnico_EN_ES.docx">Descargar</a></div>
+</div>
+<p style="margin-top:40px" class="mono muted">Prompts de referencia</p>
+<details class="prompt"><summary>Plantilla CRAFT</summary><pre>[CONTEXTO]: Soy [tu puesto] en [tipo de organización] en [ciudad].
+[ROL]: Actúa como [tipo de asistente] con experiencia en [área].
+[ACCIÓN]: [Verbo] + [qué] + [de qué documento/fuente].
+[FORMATO]: Devuelve: 1) ... 2) ... 3) ...
+[TONO]: Español [formal/informal], [con/sin] tecnicismos, máximo [X] palabras.
+
+DOCUMENTO/TEXTO:
+&lt;pegar aquí&gt;</pre></details>
+<details class="prompt"><summary>Triaje de correo electrónico</summary><pre>Eres mi asistente administrativo. Para cada correo que te pegue, devuelve exactamente este formato:
+
+1. RESUMEN (máximo 25 palabras)
+2. INTENCIÓN: [información / petición / queja / agenda / negociación / comercial / otro]
+3. URGENCIA: [P1 hoy | P2 esta semana | P3 sin plazo]
+4. ÁREA: [administración / contabilidad / RRHH / comercial / dirección / jurídico / otro]
+5. ACCIONES REQUERIDAS: lista en viñetas
+6. BORRADORES DE RESPUESTA:
+   (a) Acuse de recibo (máx. 50 palabras)
+   (b) Respuesta sustantiva (máx. 120 palabras)
+   (c) Solicitar más información (máx. 80 palabras)
+
+Español profesional neutro. No inventes hechos. Si algo no se puede determinar, escribe "desconocido".</pre></details>
+<details class="prompt"><summary>Clasificador de documentos (JSON)</summary><pre>Eres un asistente de clasificación documental. Te voy a pegar las primeras 1500 palabras de un documento. Devuelve SOLO este JSON (sin preámbulo, sin explicación):
+
+{
+  "document_type": uno de [correspondencia, contrato, factura, acta, informe, nota_interna, resolucion, otro],
+  "area": uno de [administracion, contabilidad, rrhh, comercial, direccion, juridico, otro],
+  "client_token": el identificador de cliente si aparece, si no "desconocido",
+  "urgency": uno de [P1, P2, P3, desconocido],
+  "key_dates": array de fechas en formato AAAA-MM-DD encontradas en el texto,
+  "summary": resumen de máximo 30 palabras,
+  "confidence": número entre 0 y 1
+}
+
+Si la confianza en algún campo es inferior a 0.6, devolver "desconocido" en ese campo. No inventar valores.</pre></details>
+</div>
+</section>
+<section id="ingles" data-screen-label="Inglés">
+<div class="wrap">
+<div class="sec-head"><h2>Cursos de inglés</h2><span class="rule"></span></div>
+<div class="grid2">
+<div>
+<h3>Inglés general, profesional y exámenes</h3>
+<p class="muted">Clases en grupo y particulares de nivel A1 a C1. Preparación de Cambridge, Trinity (B1–C1) y Aptis. Inglés profesional para entrevistas, correos y reuniones.</p>
+<div class="chips"><span>Adolescentes</span><span>Adultos</span><span>Profesionales</span><span>Seniors</span></div>
+</div>
+<div class="grid3" style="grid-template-columns:1fr">
+<div class="card"><span class="kind">Lección · B1 <span class="sample">Muestra</span></span><h4>Writing professional emails</h4><p>Estructura de un correo formal, fórmulas de petición y práctica de redacción en 60 minutos.</p><a class="dl" href="materiales/ingles/leccion_01_business_emails_B1.md">Ver lección</a></div>
+<div class="card"><span class="kind">Lección · A2–B1 <span class="sample">Muestra</span></span><h4>English for AI tools</h4><p>Vocabulario de las interfaces de IA y cómo escribir prompts sencillos en inglés.</p><a class="dl" href="materiales/ingles/leccion_02_english_for_ai_tools_A2-B1.md">Ver lección</a></div>
+</div>
+</div>
+</div>
+</section>
+<section id="it" data-screen-label="IT y ciberseguridad">
+<div class="wrap">
+<div class="sec-head"><h2>IT y ciberseguridad</h2><span class="rule"></span></div>
+<div class="grid2">
+<div>
+<h3>Uso seguro de la IA y de las herramientas digitales</h3>
+<p class="muted">Formación en Guardia Cyber School (2024): seguridad de redes, análisis de vulnerabilidades, Active Directory, firewall y ejercicios Red y Blue Team. En mis cursos lo aplico a la protección de datos al usar IA, al phishing y a las estafas digitales.</p>
+</div>
+<div>
+<p class="mono muted">Sistemas y herramientas</p>
+<div class="chips"><span>Linux</span><span>Bash</span><span>Python</span><span>Active Directory</span><span>OPNsense</span><span>Wireshark</span><span>Nmap</span><span>APIs</span></div>
+<p class="mono muted" style="margin-top:20px">Métodos</p>
+<div class="chips"><span>ISO 27001</span><span>EBIOS</span><span>RGPD</span><span>Red / Blue Team</span></div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer><div class="wrap"><span>Eric Gharios · Granada, España</span><span><a href="mailto:ericgharios@hotmail.fr">ericgharios@hotmail.fr</a></span></div></footer>
+</body>
+</html>

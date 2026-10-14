@@ -1,0 +1,23 @@
+PLANTILLA CRAFT — COPIA Y ADAPTA A TU TAREA
+=============================================
+
+[CONTEXTO]: Soy [tu puesto] en [tipo de organización] en [ciudad].
+[ROL]: Actúa como [tipo de asistente] con experiencia en [área].
+[ACCIÓN]: [Verbo] + [qué] + [de qué documento/fuente].
+[FORMATO]: Devuelve: 1) ... 2) ... 3) ...
+[TONO]: Español [formal/informal], [con/sin] tecnicismos, máximo [X] palabras.
+
+DOCUMENTO/TEXTO:
+<pegar aquí>
+
+=============================================
+EJEMPLO COMPLETO:
+
+[CONTEXTO]: Soy administrativo en un despacho de abogados en Granada.
+[ROL]: Actúa como paralegal con 10 años de experiencia en derecho mercantil.
+[ACCIÓN]: Resume el contrato adjunto extrayendo: partes, objeto, duración, obligaciones principales y cláusula de rescisión.
+[FORMATO]: Devuelve una tabla con una fila por cada elemento extraído. Después, un párrafo de valoración general de máximo 100 palabras.
+[TONO]: Español profesional neutro, sin latinismos innecesarios.
+
+CONTRATO:
+<pegar el texto del contrato aquí>

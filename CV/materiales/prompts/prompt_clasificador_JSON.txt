@@ -1,0 +1,22 @@
+PROMPT CLASIFICADOR DE DOCUMENTOS (JSON)
+=========================================
+Copia este prompt. Pega las primeras 1500 palabras del documento debajo.
+
+---
+
+Eres un asistente de clasificación documental. Te voy a pegar las primeras 1500 palabras de un documento. Devuelve SOLO este JSON (sin preámbulo, sin explicación):
+
+{
+  "document_type": uno de [correspondencia, contrato, factura, acta, informe, nota_interna, resolucion, otro],
+  "area": uno de [administracion, contabilidad, rrhh, comercial, direccion, juridico, otro],
+  "client_token": el identificador de cliente si aparece, si no "desconocido",
+  "urgency": uno de [P1, P2, P3, desconocido],
+  "key_dates": array de fechas en formato AAAA-MM-DD encontradas en el texto,
+  "summary": resumen de máximo 30 palabras,
+  "confidence": número entre 0 y 1
+}
+
+Si la confianza en algún campo es inferior a 0.6, devolver "desconocido" en ese campo. No inventar valores.
+
+DOCUMENTO:
+<pegar aquí>
